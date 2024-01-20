@@ -22,9 +22,7 @@ module.exports = {
       fontWeight: {
         bold: '800'
       },
-      nav: {
-        
-      }
+     
     },
   },
   plugins: [],
