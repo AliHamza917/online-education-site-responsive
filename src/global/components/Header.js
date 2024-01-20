@@ -34,7 +34,7 @@ const Header = () => {
               
           </nav>
           {/* Mobile Nav Menue */}
-            <div className={`text-white text-4xl bg-purple font-bold text-center lg:hidden ${checked ? 'block' : 'hidden'}`}>
+            <div className={`text-white text-4xl  bg-purple font-bold text-center lg:hidden ${checked ? 'block' : 'hidden'}`}>
                   {listItem}
               </div> 
     
