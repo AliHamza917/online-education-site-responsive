@@ -1,16 +1,28 @@
-import React from 'react'
+
+import React, { useState } from "react";
 import Logo from '../../assets/images/logo.png'
 import { NavLink } from 'react-router-dom'
 import { IoMenu } from "react-icons/io5"
 import { IoCloseSharp } from "react-icons/io5"
+import { ToggleButton } from 'primereact/togglebutton';
+
+
 
 const Header = () => {
+
+    const [checked, setChecked] = useState(false);
+
+    const handleToggle = () => {
+        setChecked(!checked);
+      };
+
   return (
       <div>
           <nav className='flex justify-center py-7 lg:justify-between'>
               <div className="logo flex ">
-                  <IoMenu className='h-12 w-12 flex lg:hidden' />
-                  <IoCloseSharp className='h-12 w-12 flex lg:hidden'/>
+              <div className="h-12 w-12 flex lg:hidden" onClick={handleToggle}>
+          {checked ? <IoCloseSharp className="h-12 w-12 flex lg:hidden" /> : <IoMenu className="h-12 w-12 flex lg:hidden" />}
+        </div>   
                   <img src={Logo} alt="" />
               </div>
               <div className="hidden navbar lg:flex lg:justify-center ">
@@ -22,7 +34,7 @@ const Header = () => {
               
           </nav>
           {/* Mobile Nav Menue */}
-            <div className='text-white text-4xl bg-purple font-bold text-center lg:hidden'>
+            <div className={`text-white text-4xl bg-purple font-bold text-center lg:hidden ${checked ? 'block' : 'hidden'}`}>
                   {listItem}
               </div> 
     
