@@ -1,5 +1,4 @@
 import React from 'react'
-import MoniterImg from '../../../assets/images/moniter.png'
 import SkillsWidget from '../../../global/components/SkillsWidget'
 
 const SkillsBanner = () => {
